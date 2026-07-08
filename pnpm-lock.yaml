@@ -42,11 +42,39 @@ importers:
         specifier: ^2.1.4
         version: 2.1.9(@types/node@22.20.1)
 
-  packages/core:
+  packages/badge:
     dependencies:
       '@appbuildersph/shared':
         specifier: workspace:*
         version: link:../shared
+    devDependencies:
+      tsup:
+        specifier: ^8.3.5
+        version: 8.5.1(postcss@8.5.16)(typescript@5.9.3)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.9.3
+      vitest:
+        specifier: ^2.1.4
+        version: 2.1.9(@types/node@22.20.1)
+
+  packages/core:
+    dependencies:
+      '@appbuildersph/badge':
+        specifier: workspace:*
+        version: link:../badge
+      '@appbuildersph/logger':
+        specifier: workspace:*
+        version: link:../logger
+      '@appbuildersph/notifications':
+        specifier: workspace:*
+        version: link:../notifications
+      '@appbuildersph/shared':
+        specifier: workspace:*
+        version: link:../shared
+      '@appbuildersph/watcher':
+        specifier: workspace:*
+        version: link:../watcher
     devDependencies:
       tsup:
         specifier: ^8.3.5

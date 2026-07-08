@@ -1,7 +1,7 @@
 {
-  "name": "@appbuildersph/core",
+  "name": "@appbuildersph/badge",
   "version": "0.0.1",
-  "description": "The Trust, Identity, Monitoring & AI SDK for Modern Applications.",
+  "description": "Floating Verified Badge UI web component for the App Builders PH SDK.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -21,11 +21,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@appbuildersph/shared": "workspace:*",
-    "@appbuildersph/badge": "workspace:*",
-    "@appbuildersph/logger": "workspace:*",
-    "@appbuildersph/notifications": "workspace:*",
-    "@appbuildersph/watcher": "workspace:*"
+    "@appbuildersph/shared": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.3.5",
