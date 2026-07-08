@@ -1,5 +1,11 @@
 # @appbuildersph/shared
 
+## 0.0.3
+
+### Patch Changes
+
+- ed468c1: Add/update README documentation with usage examples.
+
 ## 0.0.2
 
 ### Patch Changes

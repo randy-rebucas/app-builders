@@ -1,6 +1,6 @@
 {
   "name": "@appbuildersph/badge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Floating Verified Badge UI web component for the App Builders PH SDK.",
   "type": "module",
   "main": "./dist/index.cjs",

@@ -1,5 +1,12 @@
 # @appbuildersph/notifications
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [ed468c1]
+  - @appbuildersph/shared@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @appbuildersph/core
 
+## 0.0.3
+
+### Patch Changes
+
+- ed468c1: Add/update README documentation with usage examples.
+- Updated dependencies [ed468c1]
+  - @appbuildersph/badge@0.1.1
+  - @appbuildersph/shared@0.0.3
+  - @appbuildersph/logger@0.0.3
+  - @appbuildersph/notifications@0.0.3
+  - @appbuildersph/watcher@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes

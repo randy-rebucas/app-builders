@@ -1,6 +1,6 @@
 {
   "name": "@appbuildersph/notifications",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Notification center for the App Builders PH SDK — multi-channel dispatch for alerts, incidents, and AI recommendations.",
   "type": "module",
   "main": "./dist/index.cjs",

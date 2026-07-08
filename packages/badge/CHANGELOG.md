@@ -1,5 +1,13 @@
 # @appbuildersph/badge
 
+## 0.1.1
+
+### Patch Changes
+
+- ed468c1: Add/update README documentation with usage examples.
+- Updated dependencies [ed468c1]
+  - @appbuildersph/shared@0.0.3
+
 ## 0.1.0
 
 ### Minor Changes

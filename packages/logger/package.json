@@ -1,6 +1,6 @@
 {
   "name": "@appbuildersph/logger",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Enterprise logger for the App Builders PH SDK — levels, transports, rotation, and structured querying.",
   "type": "module",
   "main": "./dist/index.cjs",

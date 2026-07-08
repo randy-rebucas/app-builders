@@ -1,6 +1,6 @@
 {
   "name": "@appbuildersph/core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The Trust, Identity, Monitoring & AI SDK for Modern Applications.",
   "type": "module",
   "main": "./dist/index.cjs",
