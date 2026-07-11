@@ -1,6 +1,11 @@
 import type { BadgeConfig } from "@appbuildersph/shared";
 import { BADGE_TAG, defineBadgeElement, type BadgeElement } from "./element.js";
-import { resolveBadgeConfig, type BadgeIdentityInfo, type ResolvedBadgeConfig } from "./types.js";
+import {
+  resolveBadgeConfig,
+  type BadgeIdentityInfo,
+  type BadgeStatus,
+  type ResolvedBadgeConfig,
+} from "./types.js";
 
 export class Badge {
   private readonly identity: BadgeIdentityInfo;
@@ -42,6 +47,12 @@ export class Badge {
       this.unmount();
       return;
     }
+    this.el.setConfig(this.config, this.identity);
+  }
+
+  setStatus(status: BadgeStatus): void {
+    this.identity.status = status;
+    if (!this.el || !this.config) return;
     this.el.setConfig(this.config, this.identity);
   }
 }

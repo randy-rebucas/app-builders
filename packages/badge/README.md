@@ -77,3 +77,24 @@ For plain HTML pages with no build step, use the prebuilt IIFE bundle
 | `position`   | `"bottom-right" \| "bottom-left" \| "top-right" \| "top-left"` | `"bottom-right"` |
 | `animation`  | `boolean`                                                   | `true`         |
 | `expandable` | `boolean`                                                   | `true`         |
+| `verifyUrl`  | `string`                                                    | `undefined`    |
+| `logoUrl`    | `string`                                                    | `undefined`    |
+
+`verifyUrl`, if set, adds a "Learn more →" link to the expanded panel that opens
+in a new tab. `logoUrl`, if set, renders a small logo image (e.g. your app's
+icon) inside the badge alongside the status dot; if omitted, a small PH flag
+is shown as the default logo.
+
+## Live status
+
+The status dot reflects `BadgeIdentityInfo.status`
+(`"verified" | "degraded" | "offline" | "unverified"`), which defaults from the
+`verified` boolean when omitted. Update it at runtime with `Badge.setStatus()`:
+
+```ts
+badge.setStatus("degraded");
+```
+
+When using `@appbuildersph/core` with both `badge` and `watcher` enabled, this
+is wired up automatically — incidents mark the badge `"degraded"`, and a
+recovered health score marks it `"verified"` again.

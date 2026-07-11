@@ -1,11 +1,18 @@
 import type { BadgeConfig, BadgePosition, Environment, Theme } from "@appbuildersph/shared";
 
+export type BadgeStatus = "verified" | "degraded" | "offline" | "unverified";
+
 export interface BadgeIdentityInfo {
   appName: string;
   organization?: string;
   developer?: string;
   environment?: Environment;
   verified?: boolean;
+  status?: BadgeStatus;
+}
+
+export function resolveBadgeStatus(identity: BadgeIdentityInfo): BadgeStatus {
+  return identity.status ?? (identity.verified ? "verified" : "unverified");
 }
 
 export interface ResolvedBadgeConfig {
@@ -13,6 +20,8 @@ export interface ResolvedBadgeConfig {
   position: BadgePosition;
   animation: boolean;
   expandable: boolean;
+  verifyUrl?: string;
+  logoUrl?: string;
 }
 
 export const DEFAULT_BADGE_CONFIG: ResolvedBadgeConfig = {
@@ -32,5 +41,7 @@ export function resolveBadgeConfig(input?: boolean | BadgeConfig): ResolvedBadge
     position: input.position ?? DEFAULT_BADGE_CONFIG.position,
     animation: input.animation ?? DEFAULT_BADGE_CONFIG.animation,
     expandable: input.expandable ?? DEFAULT_BADGE_CONFIG.expandable,
+    verifyUrl: input.verifyUrl,
+    logoUrl: input.logoUrl,
   };
 }

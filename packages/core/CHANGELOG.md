@@ -1,5 +1,17 @@
 # @appbuildersph/core
 
+## 0.0.4
+
+### Patch Changes
+
+- Add `verifyUrl` (click-through link to a verification page) and `logoUrl` (custom logo, falls back to a PH flag) to `BadgeConfig`. Add a `Badge.setStatus()` API and a `status` field on badge identity so the status dot can be updated live; `@appbuildersph/core` now wires this up automatically to `Watcher` incidents/health when both `badge` and `watcher` are enabled.
+- Updated dependencies
+  - @appbuildersph/badge@0.2.0
+  - @appbuildersph/shared@0.1.0
+  - @appbuildersph/logger@0.0.4
+  - @appbuildersph/notifications@0.0.4
+  - @appbuildersph/watcher@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes

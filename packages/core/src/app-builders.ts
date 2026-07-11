@@ -46,8 +46,15 @@ export class AppBuildersInstance {
 
     if (config.watcher) {
       this.watcherInstance = new Watcher({
-        onIncident: (incident) => this.hooks.emit("incident", incident),
-        onMetrics: (snapshot) => this.hooks.emit("metrics", snapshot),
+        onIncident: (incident) => {
+          this.hooks.emit("incident", incident);
+          this.badgeInstance?.setStatus("degraded");
+        },
+        onMetrics: (snapshot) => {
+          this.hooks.emit("metrics", snapshot);
+          const healthScore = this.watcherInstance?.health().healthScore ?? 0;
+          if (healthScore >= 80) this.badgeInstance?.setStatus("verified");
+        },
       });
       this.watcherInstance.start();
     }

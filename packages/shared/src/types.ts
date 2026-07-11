@@ -14,6 +14,8 @@ export interface BadgeConfig {
   position?: BadgePosition;
   animation?: boolean;
   expandable?: boolean;
+  verifyUrl?: string;
+  logoUrl?: string;
 }
 
 export interface AppBuildersConfig {

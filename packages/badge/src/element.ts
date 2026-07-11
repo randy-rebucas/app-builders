@@ -29,6 +29,10 @@ export function defineBadgeElement(): void {
           (event.currentTarget as HTMLElement).classList.toggle("ab-badge--expanded");
         });
       }
+
+      this.shadow.querySelector(".ab-badge__link")?.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
     }
   }
 

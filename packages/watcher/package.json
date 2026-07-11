@@ -1,6 +1,6 @@
 {
   "name": "@appbuildersph/watcher",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Application watcher for the App Builders PH SDK — CPU/RAM/health monitoring, crash capture, and incident creation.",
   "type": "module",
   "main": "./dist/index.cjs",
