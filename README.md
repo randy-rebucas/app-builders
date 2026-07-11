@@ -45,6 +45,9 @@ pnpm lint         # eslint
 pnpm changeset    # record a changeset for release
 ```
 
+See [docs/RELEASING.md](docs/RELEASING.md) for the full release process
+(changesets → version → npm publish via CI).
+
 ## Next phases
 
 - Feature 1 (Verified Badge) → `packages/badge`
